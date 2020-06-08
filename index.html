@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Endlich 18!</title>
+
+</head>
+
+<body>
+
+    <p>
+
+        <h1>Herausforderung 3. Tag</h1>
+
+        Hallo Alex, <br>
+
+       nachdem du alles bislang l&ouml;sen konntest und auch scheinbar das Quiz dich nicht aufhalten konnte, hoffe ich, dass es dich mehr herausfordert!<br>
+
+        F&uuml;r diese Aufgabe ben&ouml;tigst du neben deinem Coumputer auch noch deinen Verstand und kleine Programmierf&auml;higkeiten. Deine Aufgabe: <br>
+
+        <br>
+
+        Du bekommst den Quelltext und folgendes Problem: <br>
+
+        Modifiziere den Quelltext so, dass das man auf "Los geht es!" dr&uuml;ckt, um das Quiz zu starten, und vor dem Quiz erstmal eine Fragekategorie ausgewählt werden muss. <br>
+
+        Die Fragen der 2. Kategorie findest du im Quelltext (alles zusammen als Kommentar). Au&szlig;erdem fordere ich dich heraus, eine 3. Kategorie zu erstellen. 
+        
+        <br>
+        
+        Falls du dann noch Lust hast, kannst du gerne mit CSS alles ein wenig sch&ouml;ner gestalten. <br>
+
+        <br>
+
+        Du hast f&uuml;r die L&ouml;sung des Problems bis morgen Abend um 19 Uhr Zeit. <br>
+
+        <p id="demo"></p>
+
+        <script>
+
+            // Set the date we're counting down to
+
+            var countDownDate = new Date("Jun 9, 2020 19:00:00").getTime();
+
+            
+
+            // Update the count down every 1 second
+
+            var x = setInterval(function() {
+
+            
+
+              // Get today's date and time
+
+              var now = new Date().getTime();
+
+                
+
+              // Find the distance between now and the count down date
+
+              var distance = countDownDate - now;
+
+                
+
+              // Time calculations for days, hours, minutes and seconds
+
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                
+
+              // Output the result in an element with id="demo"
+
+              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+
+              + minutes + "m " + seconds + "s ";
+
+                
+
+              // If the count down is over, write some text 
+
+              if (distance < 0) {
+
+                clearInterval(x);
+
+                document.getElementById("demo").innerHTML = "Die Zeit ist um! Hier (https://bday-tech.github.io/2ndquiz/) geht es weiter.";
+
+              }
+
+            }, 1000);
+
+            </script>
+
+    </p>
+            :)
+    <p>
+        <!--
+            
+var questions = [
+     {
+           prompt: "Was schafft die Struktur der Website?\n(a) HTML\n\ (b) CSS\n(c) JavaScrips",
+           answer: "a"
+     },
+     {
+          prompt: "In welchem Tag steht der Inhalt der Website?\n(a) HTML\n\ (b) Head\n(c) Body",
+          answer: "c"
+     },
+     {
+          prompt: "Ist HTML5 der aktuelle Standart?\n(a) Ja\n\ (b) Nein, HTML 5 gibt es noch gar nicht. Es ist noch in Entwicklung\n(c) Nein, es ist die aktuellste Version, wird aber kaum verwendet.",
+          answer: "a"
+     },
+     {
+         prompt:  "Wo stellt man den Titel der Website ein?\n(a) Heading\n\ (b) Head\n(c) Body",
+         answer: "b"
+     },
+     {
+         prompt:  "Was ist CSS ausgeschrieben?\n(a) Code Style Sheets\n\ (b) Cascade Style Source\n(c) Cascade Style Sheets",
+         answer: "c"
+    },
+    {
+         prompt:  "Welchen Zweck hat <canvas>?\n(a) erzeugt Leinwand\n\ (b) erstellt Datenbank\n(c) ersetzt Flash Player",
+         answer: "a"
+    },
+    {
+         prompt:  "Werden Tabellen zur Formatierung genutzt?\n(a) Ja, aber nur bei veralteten Websites\n\ (b)Ja, generell\n(c) Nein",
+         answer: "a"
+    },
+    {
+         prompt:  "An welche Programmiersprache ist JavaScripts entfernt angelehnt?\n(a) Java\n\ (b) C++\n(c) Python",
+         answer: "b"
+    },
+    {
+         prompt:  "Was ist Reverse Engineering?\n(a) Ein Fachbereich in der Website Entwicklung\n\ (b) Ein Fachbereich der Datenanalyse\n(c) Ein Fachbereich der Websitanalyse",
+         answer: "b"
+    },
+    {
+         prompt:  "Was ist HTML ausgeschrieben?\n(a) HyperText Makeup Language\n\ (b) HyperTool Makeup Language\n(c) HyperText Markup Language",
+         answer: "c"
+    }
+];
+var score = 0;
+
+for(var i = 0; i < questions.length; i++){
+     var response = window.prompt(questions[i].prompt);
+     if(response == questions[i].answer){
+          score++;
+          alert("Richtig!");
+     } else {
+          alert("Leider falsch!");
+     }
+}
+alert("Du hast " + score + "/" + questions.length + "Fragen richtig!");
+
+if(score==questions.lenght){
+    alert("Congrats, du hast es geschafft! Unter https://github.com/bday-tech/3rdchallenge geht es morgen weiter!")
+}
+
+
+
+        -->
+    </p>
+
+</body>
+
+</html>
